@@ -1,0 +1,43 @@
+{
+	"name": "DS_SqlServer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_SqlServerAdventureWorks",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "loadid",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "tablename",
+				"type": "varchar"
+			},
+			{
+				"name": "loadstatus",
+				"type": "varchar"
+			},
+			{
+				"name": "dataread",
+				"type": "varchar"
+			},
+			{
+				"name": "Errorid",
+				"type": "varchar"
+			},
+			{
+				"name": "errormessage",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "HumanResources",
+			"table": "Department"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

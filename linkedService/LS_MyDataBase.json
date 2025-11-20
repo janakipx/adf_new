@@ -1,0 +1,21 @@
+{
+	"name": "LS_MyDataBase",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "DESKTOP-38EI4G6\\SQLEXPRESS",
+			"database": "MyDataBase",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "janaki",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyM2MwNzBhOS05Y2RlLTQ2ZTItODE0YS02MDM5Nzc0NzRiYWEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "selfhostedIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

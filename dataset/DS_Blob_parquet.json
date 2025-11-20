@@ -1,0 +1,19 @@
+{
+	"name": "DS_Blob_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Xml",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "HumanResources.Department.txt",
+				"container": "blobtarget"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

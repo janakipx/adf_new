@@ -1,0 +1,20 @@
+{
+	"name": "DS_blob_excel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageExcel",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "blobtarget"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,24 @@
+{
+	"name": "TR_EVNT_ON_NEW_FILE",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copy_activity_with_trigger",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/allfiles/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/25037182-5e48-4551-8e5a-b7339adc2bee/resourceGroups/rg_dev_chev_ppd001/providers/Microsoft.Storage/storageAccounts/sourceallfiles",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
