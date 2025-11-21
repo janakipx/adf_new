@@ -1,0 +1,237 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfbackendtable"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage2_sinkcsv_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2_sinkcsv'"
+		},
+		"AzureBlobStorageExcel_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageExcel'"
+		},
+		"AzureBlobStorage_csv_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage_csv'"
+		},
+		"DS_SqlServerAdventureWorks_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'DS_SqlServerAdventureWorks'"
+		},
+		"LS_Adventureworks_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_Adventureworks'"
+		},
+		"LS_Blob_sql_migration_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Blob_sql_migration'"
+		},
+		"LS_Blobcsv_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Blobcsv'"
+		},
+		"LS_MyDataBase_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_MyDataBase'"
+		},
+		"LS_SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SqlServer1'"
+		},
+		"LS_blob_allfiles_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_blob_allfiles'"
+		},
+		"LS_blob_sink_allfiles_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_blob_sink_allfiles'"
+		},
+		"DS_SqlServerAdventureWorks_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"DS_SqlServerAdventureWorks_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2019"
+		},
+		"DS_SqlServerAdventureWorks_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "janaki"
+		},
+		"LS_Adventureworks_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"LS_Adventureworks_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2019"
+		},
+		"LS_Adventureworks_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "janaki"
+		},
+		"LS_MyDataBase_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"LS_MyDataBase_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "MyDataBase"
+		},
+		"LS_MyDataBase_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "janaki"
+		},
+		"LS_SqlServer1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"LS_SqlServer1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "MyDataBase"
+		},
+		"LS_SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "janaki"
+		},
+		"TR_EVNT_ON_NEW_FILE_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/25037182-5e48-4551-8e5a-b7339adc2bee/resourceGroups/rg_dev_chev_ppd001/providers/Microsoft.Storage/storageAccounts/sourceallfiles"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfbackendtable_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorage2_sinkcsv_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_sinkcsv_connectionString')]"
+					},
+					"AzureBlobStorageExcel_connectionString": {
+						"value": "[parameters('AzureBlobStorageExcel_connectionString')]"
+					},
+					"AzureBlobStorage_csv_connectionString": {
+						"value": "[parameters('AzureBlobStorage_csv_connectionString')]"
+					},
+					"LS_Blob_sql_migration_connectionString": {
+						"value": "[parameters('LS_Blob_sql_migration_connectionString')]"
+					},
+					"LS_Blobcsv_connectionString": {
+						"value": "[parameters('LS_Blobcsv_connectionString')]"
+					},
+					"LS_blob_allfiles_connectionString": {
+						"value": "[parameters('LS_blob_allfiles_connectionString')]"
+					},
+					"LS_blob_sink_allfiles_connectionString": {
+						"value": "[parameters('LS_blob_sink_allfiles_connectionString')]"
+					},
+					"DS_SqlServerAdventureWorks_password": {
+						"value": "[parameters('DS_SqlServerAdventureWorks_password')]"
+					},
+					"LS_Adventureworks_password": {
+						"value": "[parameters('LS_Adventureworks_password')]"
+					},
+					"LS_MyDataBase_password": {
+						"value": "[parameters('LS_MyDataBase_password')]"
+					},
+					"LS_SqlServer1_password": {
+						"value": "[parameters('LS_SqlServer1_password')]"
+					},
+					"DS_SqlServerAdventureWorks_properties_typeProperties_server": {
+						"value": "[parameters('DS_SqlServerAdventureWorks_properties_typeProperties_server')]"
+					},
+					"DS_SqlServerAdventureWorks_properties_typeProperties_database": {
+						"value": "[parameters('DS_SqlServerAdventureWorks_properties_typeProperties_database')]"
+					},
+					"DS_SqlServerAdventureWorks_properties_typeProperties_userName": {
+						"value": "[parameters('DS_SqlServerAdventureWorks_properties_typeProperties_userName')]"
+					},
+					"LS_Adventureworks_properties_typeProperties_server": {
+						"value": "[parameters('LS_Adventureworks_properties_typeProperties_server')]"
+					},
+					"LS_Adventureworks_properties_typeProperties_database": {
+						"value": "[parameters('LS_Adventureworks_properties_typeProperties_database')]"
+					},
+					"LS_Adventureworks_properties_typeProperties_userName": {
+						"value": "[parameters('LS_Adventureworks_properties_typeProperties_userName')]"
+					},
+					"LS_MyDataBase_properties_typeProperties_server": {
+						"value": "[parameters('LS_MyDataBase_properties_typeProperties_server')]"
+					},
+					"LS_MyDataBase_properties_typeProperties_database": {
+						"value": "[parameters('LS_MyDataBase_properties_typeProperties_database')]"
+					},
+					"LS_MyDataBase_properties_typeProperties_userName": {
+						"value": "[parameters('LS_MyDataBase_properties_typeProperties_userName')]"
+					},
+					"LS_SqlServer1_properties_typeProperties_server": {
+						"value": "[parameters('LS_SqlServer1_properties_typeProperties_server')]"
+					},
+					"LS_SqlServer1_properties_typeProperties_database": {
+						"value": "[parameters('LS_SqlServer1_properties_typeProperties_database')]"
+					},
+					"LS_SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SqlServer1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfbackendtable_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"TR_EVNT_ON_NEW_FILE_properties_typeProperties_scope": {
+						"value": "[parameters('TR_EVNT_ON_NEW_FILE_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfbackendtable_ArmTemplate_0')]"
+			]
+		}
+	]
+}

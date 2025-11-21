@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfbackendtable"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_sinkcsv_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorageExcel_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage_csv_connectionString": {
+			"value": ""
+		},
+		"DS_SqlServerAdventureWorks_password": {
+			"value": ""
+		},
+		"LS_Adventureworks_password": {
+			"value": ""
+		},
+		"LS_Blob_sql_migration_connectionString": {
+			"value": ""
+		},
+		"LS_Blobcsv_connectionString": {
+			"value": ""
+		},
+		"LS_MyDataBase_password": {
+			"value": ""
+		},
+		"LS_SqlServer1_password": {
+			"value": ""
+		},
+		"LS_blob_allfiles_connectionString": {
+			"value": ""
+		},
+		"LS_blob_sink_allfiles_connectionString": {
+			"value": ""
+		},
+		"DS_SqlServerAdventureWorks_properties_typeProperties_server": {
+			"value": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"DS_SqlServerAdventureWorks_properties_typeProperties_database": {
+			"value": "AdventureWorks2019"
+		},
+		"DS_SqlServerAdventureWorks_properties_typeProperties_userName": {
+			"value": "janaki"
+		},
+		"LS_Adventureworks_properties_typeProperties_server": {
+			"value": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"LS_Adventureworks_properties_typeProperties_database": {
+			"value": "AdventureWorks2019"
+		},
+		"LS_Adventureworks_properties_typeProperties_userName": {
+			"value": "janaki"
+		},
+		"LS_MyDataBase_properties_typeProperties_server": {
+			"value": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"LS_MyDataBase_properties_typeProperties_database": {
+			"value": "MyDataBase"
+		},
+		"LS_MyDataBase_properties_typeProperties_userName": {
+			"value": "janaki"
+		},
+		"LS_SqlServer1_properties_typeProperties_server": {
+			"value": "DESKTOP-38EI4G6\\SQLEXPRESS"
+		},
+		"LS_SqlServer1_properties_typeProperties_database": {
+			"value": "MyDataBase"
+		},
+		"LS_SqlServer1_properties_typeProperties_userName": {
+			"value": "janaki"
+		},
+		"TR_EVNT_ON_NEW_FILE_properties_typeProperties_scope": {
+			"value": "/subscriptions/25037182-5e48-4551-8e5a-b7339adc2bee/resourceGroups/rg_dev_chev_ppd001/providers/Microsoft.Storage/storageAccounts/sourceallfiles"
+		}
+	}
+}
