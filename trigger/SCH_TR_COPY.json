@@ -1,0 +1,24 @@
+{
+	"name": "SCH_TR_COPY",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline_binary_dataset",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-11-20T09:05:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

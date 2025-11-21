@@ -1,0 +1,9 @@
+{
+	"name": "adfsimplecopy",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d3b5b887-9a25-4876-8bff-ef7085ffa834",
+		"tenantId": "26f68efb-9ca0-43d8-b8c1-1d656f9b0104"
+	}
+}
