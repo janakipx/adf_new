@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfsimplecopy"
+		},
+		"ls_allfiles_connectionString": {
+			"value": ""
+		},
+		"ls_sinkcsv_connectionString": {
+			"value": ""
+		},
+		"TR_EVENT_ON_NEW_FILE_properties_typeProperties_scope": {
+			"value": "/subscriptions/25037182-5e48-4551-8e5a-b7339adc2bee/resourceGroups/rg_dev_chev_ppd001/providers/Microsoft.Storage/storageAccounts/sourceallfiles"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
